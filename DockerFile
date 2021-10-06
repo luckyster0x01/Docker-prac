@@ -51,4 +51,23 @@ RUN \
     curl -L -o all.txt https://gist.githubusercontent.com/jhaddix/86a06c5dc309d08580a018c66354a056/raw/96f4e51d96b2203f19f6381c8c545b278eaa0837/all.txt && \
     curl -L -o fuzz.txt https://raw.githubusercontent.com/Bo0oM/fuzz.txt/master/fuzz.txt
 
-s
+
+RUN \
+    # Git clone of SqlMap
+    git clone https://github.com/sqlmapproject/sqlmap.git &&\
+    # Git clone of HawkScan
+    git clone https://github.com/c0dejump/HawkScan.git &&\
+    #Git clone of impacket toolkit
+    git clone https://github.com/SecureAuthCorp/impacket.git &&\
+    #Git clone Assetfinder
+    git clone https://github.com/tomnomnom/assetfinder.git &&\
+    #git clone of xsstrike
+    git clone https://github.com/s0md3v/XSStrike.git &&\
+    #git clone whatweb
+    git clone https://github.com/urbanadventurer/WhatWeb.git && \
+    #git clone dirsearch
+    git clone  https://github.com/maurosoria/dirsearch.git && \
+    #git clone arjun
+    git clone  https://github.com/s0md3v/Arjun.git && \
+    #git clone joomscan
+    git clone  https://github.com/rezasp/joomscan.git 
