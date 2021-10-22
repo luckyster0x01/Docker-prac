@@ -35,8 +35,8 @@ RUN \
 
 
 RUN \
-    mkdir wordlists &&\
-    cd wordlists &&\
+    mkdir Testwordlist &&\
+    cd Testwordlist &&\
     git clone  https://github.com/daviddias/node-dirbuster.git && \
     git clone  https://github.com/v0re/dirb.git && \
     curl -L -o rockyou.txt https://github.com/brannondorsey/naive-hashcat/releases/download/data/rockyou.txt 
