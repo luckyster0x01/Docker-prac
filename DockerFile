@@ -1,6 +1,6 @@
 
 FROM kalilinux:latest
-USER Developer
+USER Tester
 
 FROM debian:latest
 USER test
