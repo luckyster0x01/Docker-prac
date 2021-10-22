@@ -1,3 +1,7 @@
+
+FROM kalilinux:latest
+USER Developer
+
 FROM debian:latest
 USER test
 RUN \
@@ -5,10 +9,7 @@ RUN \
     apt-get -y upgrade && \
     apt-get -f install -y --no-install-recommends \
     htop \
-    unzip \
-    locate \
-    p7zip-full \
-    vim \
+    unzip 
 RUN \
     gem install nokogiri 
 
@@ -27,6 +28,9 @@ RUN \
 # Install node
     curl -sL https://deb.nodesource.com/setup_14.x | bash && \
     apt install -y nodejs
+#install kali linux prac
+apt install update && upgrade -y 
+
 # Install Perl 
 ENV GOROOT "/usr/local/go"
 ENV GOPATH "/root/go"
@@ -41,6 +45,7 @@ ENV GOROOT "/usr/local/go"
 ENV GOPATH "/root/go"
 ENV PATH "$PATH:$GOPATH/bin:$GOROOT/bin"
 
+
 #Working Directory of tools
 RUN \
     cd /home/$USER &&\
@@ -49,18 +54,11 @@ RUN \
 
 
 RUN \
-    mkdir wordlists &&\
-    cd wordlists &&\
-    git clone  https://github.com/xmendez/wfuzz.git && \
-    git clone  https://github.com/danielmiessler/SecLists.git && \
-    git clone  https://github.com/fuzzdb-project/fuzzdb.git && \
+    mkdir Testwordlist &&\
+    cd Testwordlist &&\
     git clone  https://github.com/daviddias/node-dirbuster.git && \
     git clone  https://github.com/v0re/dirb.git && \
-    curl -L -o rockyou.txt https://github.com/brannondorsey/naive-hashcat/releases/download/data/rockyou.txt && \
-    curl -L -o all.txt https://gist.githubusercontent.com/jhaddix/86a06c5dc309d08580a018c66354a056/raw/96f4e51d96b2203f19f6381c8c545b278eaa0837/all.txt && \
-    curl -L -o fuzz.txt https://raw.githubusercontent.com/Bo0oM/fuzz.txt/master/fuzz.txt
-
-
+    curl -L -o rockyou.txt https://github.com/brannondorsey/naive-hashcat/releases/download/data/rockyou.txt 
 RUN \
     # Git clone of SqlMap
     git clone https://github.com/sqlmapproject/sqlmap.git &&\
@@ -78,5 +76,11 @@ RUN \
     git clone  https://github.com/maurosoria/dirsearch.git && \
     #git clone arjun
     git clone  https://github.com/s0md3v/Arjun.git && \
+    #git clone joomscan
+    git clone  https://github.com/rezasp/joomscan.git git clone  https://github.com/s0md3v/Arjun.git && \
+    #git clone joomscan
+    git clone  https://github.com/rezasp/joomscan.git git clone  https://github.com/s0md3v/Arjun.git && \
+    #git clone joomscan
+    git clone  https://github.com/rezasp/joomscan.git git clone  https://github.com/s0md3v/Arjun.git && \
     #git clone joomscan
     git clone  https://github.com/rezasp/joomscan.git 
