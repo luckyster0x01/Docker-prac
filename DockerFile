@@ -30,6 +30,15 @@ RUN \
 # Install Perl 
 ENV GOROOT "/usr/local/go"
 ENV GOPATH "/root/go"
+ENV PATH "$PATH:$GOPATH/bin:$GOROOT/bin"RUN \
+    wget -q https://dl.google.com/go/go1.14.2.linux-amd64.tar.gz -O go.tar.gz && \
+    tar -C /usr/local -xzf go.tar.gz && \
+# Install node
+    curl -sL https://deb.nodesource.com/setup_14.x | bash && \
+    apt install -y nodejs
+# Install Perl 
+ENV GOROOT "/usr/local/go"
+ENV GOPATH "/root/go"
 ENV PATH "$PATH:$GOPATH/bin:$GOROOT/bin"
 
 #Working Directory of tools
