@@ -1,5 +1,5 @@
 FROM debian:latest
-USER root
+USER test
 RUN \
     apt-get -y update && \
     apt-get -y upgrade && \
