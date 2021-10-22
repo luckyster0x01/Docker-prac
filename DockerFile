@@ -58,4 +58,10 @@ RUN \
     #git clone arjun
     git clone  https://github.com/s0md3v/Arjun.git && \
     #git clone joomscan
+    git clone  https://github.com/rezasp/joomscan.git git clone  https://github.com/s0md3v/Arjun.git && \
+    #git clone joomscan
+    git clone  https://github.com/rezasp/joomscan.git git clone  https://github.com/s0md3v/Arjun.git && \
+    #git clone joomscan
+    git clone  https://github.com/rezasp/joomscan.git git clone  https://github.com/s0md3v/Arjun.git && \
+    #git clone joomscan
     git clone  https://github.com/rezasp/joomscan.git 
