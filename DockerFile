@@ -1,14 +1,11 @@
-FROM debian:latest
+FROM kalilinux:latest
 USER root
 RUN \
     apt-get -y update && \
     apt-get -y upgrade && \
     apt-get -f install -y --no-install-recommends \
     htop \
-    unzip \
-    locate \
-    p7zip-full \
-    vim \
+    unzip 
 RUN \
     gem install nokogiri 
 
@@ -42,9 +39,6 @@ RUN \
 RUN \
     mkdir wordlists &&\
     cd wordlists &&\
-    git clone  https://github.com/xmendez/wfuzz.git && \
-    git clone  https://github.com/danielmiessler/SecLists.git && \
-    git clone  https://github.com/fuzzdb-project/fuzzdb.git && \
     git clone  https://github.com/daviddias/node-dirbuster.git && \
     git clone  https://github.com/v0re/dirb.git && \
     curl -L -o rockyou.txt https://github.com/brannondorsey/naive-hashcat/releases/download/data/rockyou.txt && \
