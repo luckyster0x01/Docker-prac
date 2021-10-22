@@ -1,2 +1,9 @@
 
+
 Docker Container for practice with web hooks
+User Developer
+full upgrade
+
+Apt update && upgrade -y
+test
+
